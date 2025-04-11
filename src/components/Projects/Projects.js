@@ -4,31 +4,18 @@ import { BlogCard, CardInfo, ExternalLinks, GridContainer, HeaderThree, Hr, Tag,
 import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalComponents';
 import { projects } from '../../constants/constants';
 
-// const projectsDemo = [{
-//   title: 'Project 1',
-//   description: 'This is a really really long description about this project.'
-// }, {
-//   title: 'Project 2',
-//   description: 'This is a really really long description about this project.'
-// }, {
-//   title: 'Project 3',
-//   description: 'This is a really really long description about this project.'       
-// }, {
-//   title: 'Project 4',
-//   description: 'This is a really really long description about this project.'
-// }];
-
 const Projects = () => (
-  <Section nopadding id="project">
+  <Section nopadding="true" id="projects">
     <SectionDivider />
-    <SectionTitle main>Projects</SectionTitle>
+    <SectionTitle main="true">Projects</SectionTitle>
     <GridContainer>
-      {projects.map(({id, image, description, title, tags, source, visit}) => {
+      {projects.map(({id, image, description, title, completed, tags, source, visit}) => {
         return (
           <BlogCard key={id}>
             <Img src={image} />
             <TitleContent>
-              <HeaderThree title>{title}</HeaderThree>
+              <HeaderThree title="true">{title}</HeaderThree>
+              {completed? <div style={{ fontSize: '1.3rem', color: 'green'}}>Completed</div> : <div style={{ fontSize: '1.3rem', color: 'red'}}>In Progress</div>}
               <Hr/>
             </TitleContent>
             <CardInfo>{description}</CardInfo>
@@ -41,8 +28,8 @@ const Projects = () => (
               </TagList>
             </div>
             <UtilityList>
-              <ExternalLinks href={visit}>Code</ExternalLinks>
-              <ExternalLinks href={source}>Source</ExternalLinks>
+              <ExternalLinks style={{pointerEvents: completed ? 'auto' : 'none'}} href={visit}>Code</ExternalLinks>
+              <ExternalLinks style={{pointerEvents: completed ? 'auto' : 'none'}} href={source}>Source</ExternalLinks>
             </UtilityList>
           </BlogCard>
 

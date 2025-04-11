@@ -5,16 +5,16 @@ import Button from '../../styles/GlobalComponents/Button';
 import { LeftSection } from './HeroStyles';
 
 const Hero = (props) => (
-  <Section row nopadding>
+  <Section row="true" nopadding="true">
     <LeftSection>
-      <SectionTitle main center>
+      <SectionTitle main="true" center="true">
         Hi, <br />
-        I'm Long
+        I'm Long Phan
       </SectionTitle>
       <SectionText>
-        Full-Stack Developer
+        I'm a Computer Science student with a passion for building scalable and efficient systems.
       </SectionText>
-      <Button onClick={() => window.location = 'https://google.com'}>Learn More</Button>
+      <Button onClick={() => window.location = 'https://www.linkedin.com/in/long-phan-1203t/'}>Learn More</Button>
     </LeftSection>
   </Section>
 );

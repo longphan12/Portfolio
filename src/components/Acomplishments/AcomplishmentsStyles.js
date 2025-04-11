@@ -23,9 +23,11 @@ export const Boxes = styled.div`
 `
 
 export const Box = styled.div`
-  background: #212D45;
+  background: #e8e2d9;
   border-radius: 12px;
-  height: 144px;
+  height: 110px;
+  width: 250px;
+  text-align: center;
   padding: 24px;
   @media ${props => props.theme.breakpoints.lg} {
     height: 210px;
@@ -52,7 +54,7 @@ export const BoxNum = styled.h5`
   font-size: 36px;
   line-height: 40px;
   letter-spacing: 0.01em;
-  color: #FFFFFF;
+  color: #333333;
   margin-bottom: 8px;
 
   @media ${props => props.theme.breakpoints.md} {
@@ -71,7 +73,7 @@ export const BoxText = styled.p`
   font-size: 18px;
   line-height: 24px;
   letter-spacing: 0.02em;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(0, 0, 0, 0.75);
 
   @media ${props => props.theme.breakpoints.md}{
     font-size: 16px;
@@ -110,7 +112,7 @@ export const JoinText = styled.h5`
   font-size: 24px;
   line-height: 40px;
   letter-spacing: 0.02em;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(0, 0, 0, 0.5);
 
 @media ${props => props.theme.breakpoints.md}{
   line-height: 32px;

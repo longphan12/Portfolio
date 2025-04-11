@@ -6,14 +6,24 @@ import Technologies from '../components/Technologies/Technologies';
 import Timeline from '../components/TimeLine/TimeLine';
 import { Layout } from '../layout/Layout';
 import { Section } from '../styles/GlobalComponents';
+import styled from 'styled-components';
+
+// Create a responsive hero section
+const HeroSection = styled(Section)`
+  @media ${(props) => props.theme.breakpoints.sm} {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+`;
 
 const Home = () => {
   return (
     <Layout>
-      <Section grid>
+      <HeroSection grid="true">
         <Hero />
         <BgAnimation />
-      </Section>
+      </HeroSection>
       <Projects />
       <Technologies />
       <Timeline />

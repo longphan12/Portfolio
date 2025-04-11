@@ -30,7 +30,7 @@ export const SectionTitle = styled.h2`
   line-height: ${(props) => props.main ? '72px' : '56px'};
   width: max-content;
   max-width: 100%;
-  background: linear-gradient(121.57deg, #FFFFFF 18.77%, rgba(255, 255, 255, 0.66) 60.15%);
+  background: linear-gradient(121.57deg, #1c1c1c 18.77%, rgba(28, 28, 28, 0.8) 60.15%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 16px;
@@ -60,7 +60,7 @@ export const SectionText = styled.p`
   line-height: 40px;
   font-weight: 300;
   padding-bottom: 3.6rem;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(0, 0, 0, 0.7);
 
   @media ${(props) => props.theme.breakpoints.md} {
     max-width: 670px;
@@ -81,7 +81,7 @@ export const SectionDivider = styled.div`
   width: 64px;
   height: 6px;
   border-radius: 10px;
-  background-color: #fff;
+  background-color: #333;
   background: ${(props) => props.colorAlt ? 
     'linear-gradient(270deg, #F46737 0%, #945DD6 100%)' :
     'linear-gradient(270deg, #13ADC7 0%, #945DD6 100%)'};
@@ -103,7 +103,7 @@ export const SectionSubText = styled.p`
   font-weight: 300;
   font-size: 18px;
   line-height: 32px;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(0, 0, 0, 0.75);
 
 @media ${(props) => props.theme.breakpoints.md} {
     max-width: 672px;
@@ -117,9 +117,9 @@ export const SectionSubText = styled.p`
   }
 `
 export const SecondaryBtn = styled.button`
-  color: #FFF;
+  color: #333;
   background: none;
-  border: 1px solid rgba(255, 255, 255, 0.33);
+  border: 1px solid rgba(0, 0, 0, 0.33);
   box-sizing: border-box;
   border-radius: 999px;
   padding: 16px 24px;
@@ -136,9 +136,9 @@ export const SecondaryBtn = styled.button`
   }
 
   &:hover {
-    color: #0f1624;
-    background: #fff;
-    border: 1px solid #fff;
+    color: #F9F9F9;
+    background: #333;
+    border: 1px solid #333;
   }
 
   &:active {
@@ -176,7 +176,7 @@ export const ButtonBack = styled.div`
   align-items: center;
   justify-content: center;
   margin: ${({ alt, form }) => (alt || form) ? '0' : '0 0 80px'};
-  color: #fff;
+  color: #333;
   background: ${({ alt }) => alt ? 'linear-gradient(270deg, #ff622e 0%, #B133FF 100%)' : 'linear-gradient(270deg, #00DBD8 0%, #B133FF 100%)'};
   cursor: pointer;
   transition: 0.5s ease;
@@ -202,7 +202,7 @@ export const ButtonBack = styled.div`
 export const ButtonFront = styled.button`
   border: none;
   border-radius: 50px;
-  color: #fff;
+  color: #333;
   display: flex;
   position: absolute;
   top: 0;
