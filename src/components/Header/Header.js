@@ -17,12 +17,17 @@ const Header = () => (
       }}>
         <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px'}}>
           <CgWebsite size="3rem" />
-          <Span style={{marginLeft: "8px"}}>Portfolio</Span>
+          <Span style={{marginLeft: "8px"}}>LP</Span>
         </div>
       </Link>
     </Div1>
 
     <Div2>
+      <li>
+        <Link href="#overview" legacyBehavior passHref>
+          <NavLink>Overview</NavLink>
+        </Link>
+      </li>
       <li>
         <Link href="#projects" legacyBehavior passHref>
           <NavLink>Projects</NavLink>
@@ -33,11 +38,7 @@ const Header = () => (
           <NavLink>Technologies</NavLink>
         </Link>
       </li>
-      <li>
-        <Link href="#about" legacyBehavior passHref>
-          <NavLink>About</NavLink>
-        </Link>
-      </li>
+
     </Div2>
 
     <Div3>
