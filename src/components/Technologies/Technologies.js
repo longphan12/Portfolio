@@ -1,28 +1,29 @@
 import React from 'react';
-import { DiFirebase, DiReact, DiZend } from 'react-icons/di';
+import { DiFirebase, DiReact } from 'react-icons/di';
 import { Section, SectionDivider, SectionText, SectionTitle } from '../../styles/GlobalComponents';
-import { List, ListContainer, ListItem, ListParagraph, ListTitle } from './TechnologiesStyles';
-import styled from 'styled-components';
+import { ListTitle } from './TechnologiesStyles';
+import styled, { useTheme } from 'styled-components';
 
 const TechItem = styled.li`
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.5;
-  color: rgba(0, 0, 0, 0.75);
+  color: ${({ theme }) => theme.colors.primary2};
   position: relative;
-  padding: 0.5rem 0 0.5rem 1.5rem;
-  transition: transform 0.2s;
+  padding: 0.3rem 0 0.3rem 1.2rem;
+  transition: transform 0.2s, color 0.2s;
+  font-weight: 400;
   
   &:before {
     content: "•";
     position: absolute;
     left: 0;
-    color: #b99e35;
-    font-size: 1.2em;
+    color: ${({ theme }) => theme.colors.accent1};
+    font-size: 1em;
   }
   
   &:hover {
-    transform: translateX(5px);
-    color: #2c5d85;
+    transform: translateX(3px);
+    color: ${({ theme }) => theme.colors.accent2};
   }
 `;
 
@@ -33,73 +34,80 @@ const TechList = styled.ul`
 `;
 
 const IconWrapper = styled.div`
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  color: #2c5d85;
-  transition: transform 0.3s ease;
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  color: ${({ theme }) => theme.colors.accent2};
+  transition: transform 0.3s ease, color 0.3s ease;
   
   &:hover {
-    transform: translateY(-5px);
+    transform: translateY(-3px);
+    color: ${({ theme }) => theme.colors.accent1};
   }
 `;
 
 const TechCard = styled.div`
-  background: #fcfaf7;
+  background: ${({ theme }) => theme.colors.background2};
   border-radius: 10px;
-  padding: 2rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 1.2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
   height: 100%;
+  color: ${({ theme }) => theme.colors.primary1};
+  border: 1px solid ${({ theme }) => theme.colors.background3};
+  font-size: 12px;
+  font-weight: 400;
   
   &:hover {
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
-    transform: translateY(-5px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    transform: translateY(-3px);
+    background: ${({ theme }) => theme.colors.background3};
   }
 `;
 
-const Technologies = () => (
-  <Section id="tech">
-    <SectionDivider />
-    <br/>
-    <SectionTitle>Technologies</SectionTitle>
-    <SectionText>
-      I've worked with a range of technologies in the web development world. 
-      From Front-end to Back-end and Design.
-    </SectionText>
-    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '2rem', width: '100%' }}>
-      <TechCard>
-        <IconWrapper>
-          <DiReact />
-        </IconWrapper>
-        <ListTitle>Frontend</ListTitle>
-        <TechList>
-          <TechItem>React.js</TechItem>
-          <TechItem>Next.js</TechItem>
-          <TechItem>Tailwind CSS</TechItem>
-          <TechItem>TypeScript</TechItem>
-          <TechItem>HTML</TechItem>
-          <TechItem>CSS</TechItem>
-          <TechItem>JavaScript</TechItem>
-        </TechList>
-      </TechCard>
+const Technologies = () => {
+  const theme = useTheme();
+  return (
+    <Section id="tech">
+      <SectionTitle>Technologies</SectionTitle>
+      <SectionText>
+        I've worked with a range of technologies in the web development world. 
+        From Front-end to Back-end and Design.
+      </SectionText>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '2rem', width: '100%' }}>
+        <TechCard theme={theme}>
+          <IconWrapper theme={theme}>
+            <DiReact />
+          </IconWrapper>
+          <ListTitle>Frontend</ListTitle>
+          <TechList>
+            <TechItem theme={theme}>React.js</TechItem>
+            <TechItem theme={theme}>Next.js</TechItem>
+            <TechItem theme={theme}>Tailwind CSS</TechItem>
+            <TechItem theme={theme}>TypeScript</TechItem>
+            <TechItem theme={theme}>HTML</TechItem>
+            <TechItem theme={theme}>CSS</TechItem>
+            <TechItem theme={theme}>JavaScript</TechItem>
+          </TechList>
+        </TechCard>
 
-      <TechCard>
-        <IconWrapper>
-          <DiFirebase />
-        </IconWrapper>
-        <ListTitle>Backend</ListTitle>
-        <TechList>
-          <TechItem>Node.js</TechItem>
-          <TechItem>Express.js</TechItem>
-          <TechItem>Flask</TechItem>
-          <TechItem>SQLAlchemy</TechItem>
-          <TechItem>PostgreSQL</TechItem>
-          <TechItem>MongoDB</TechItem>
-          <TechItem>Mongoose</TechItem>
-        </TechList>
-      </TechCard>
-    </div>
-  </Section>
-);
+        <TechCard theme={theme}>
+          <IconWrapper theme={theme}>
+            <DiFirebase />
+          </IconWrapper>
+          <ListTitle>Backend</ListTitle>
+          <TechList>
+            <TechItem theme={theme}>Node.js</TechItem>
+            <TechItem theme={theme}>Express.js</TechItem>
+            <TechItem theme={theme}>Flask</TechItem>
+            <TechItem theme={theme}>SQLAlchemy</TechItem>
+            <TechItem theme={theme}>PostgreSQL</TechItem>
+            <TechItem theme={theme}>MongoDB</TechItem>
+            <TechItem theme={theme}>Mongoose</TechItem>
+          </TechList>
+        </TechCard>
+      </div>
+    </Section>
+  );
+};
 
 export default Technologies;

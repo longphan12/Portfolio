@@ -6,11 +6,18 @@ export default {
   },
   // Colors for layout
   colors: {
-    primary1: "hsl(204,23.8%,15%)",
-    background1: "#f5f3f0",
-    accent1: "hsl(34.9,98.6%,50%)",
-    button: "hsl(205.1,100%,36.1%)",
-    background2: "hsl(38,15%,92%)",
+    primary1: "#FFFFFF",         // Main text (pure white for maximum contrast)
+    primary2: "#E4E6EB",         // Secondary text (slightly softer white)
+    background1: "#18191A",      // Main background
+    background2: "#242526",      // Card/secondary background
+    background3: "#3A3B3C",      // Hover states
+    accent1: "#4A90E2",          // Primary accent
+    accent2: "#2C5D85",          // Secondary accent
+    button: "#3A3B3C",           // Button color
+    buttonHover: "#4E4F50",      // Button hover
+    success: "#4CAF50",          // Success color
+    error: "#F44336",            // Error color
+    warning: "#FFC107",          // Warning color
   },
   // Breakpoints for responsive design
   breakpoints: {

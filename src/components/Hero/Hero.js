@@ -8,8 +8,7 @@ const Hero = (props) => (
   <Section row="true" nopadding="true">
     <LeftSection>
       <SectionTitle main="true" center="true">
-        Hi, <br />
-        I'm Long Phan
+        Long Phan
       </SectionTitle>
       <SectionText>
         I'm a Computer Science student with a passion for building scalable and efficient systems.

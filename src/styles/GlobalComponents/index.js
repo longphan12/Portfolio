@@ -25,95 +25,91 @@ export const Section = styled.section`
 `
 
 export const SectionTitle = styled.h2`
-  font-weight: 800;
-  font-size: ${(props) => props.main ? '65px' : '56px'};
-  line-height: ${(props) => props.main ? '72px' : '56px'};
+  font-weight: 600;
+  font-size: ${(props) => props.main ? '3.8rem' : '2.8rem'};
+  line-height: ${(props) => props.main ? '4.6rem' : '3.6rem'};
   width: max-content;
   max-width: 100%;
-  background: linear-gradient(121.57deg, #1c1c1c 18.77%, rgba(28, 28, 28, 0.8) 60.15%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 16px;
-  padding: ${(props) => props.main ? '58px 0 16px' : '0'};
+  color: ${(props) => props.theme.colors.primary1};
+  margin-bottom: 1.2rem;
+  padding: ${(props) => props.main ? '3.2rem 0 0.8rem' : '0'};
+  text-shadow: 0 1px 2px rgba(0,0,0,0.10);
+  text-align: center;
 
   @media ${props => props.theme.breakpoints.md}{
-    font-size: ${(props) => props.main ? '56px' : '48px'};
-    line-height: ${(props) => props.main ? '56px' : '48px'};
-    margin-bottom: 12px;
-    padding: ${(props) => props.main ? '40px 0 12px' : '0'};
+    font-size: ${(props) => props.main ? '3.2rem' : '2.6rem'};
+    line-height: ${(props) => props.main ? '4rem' : '3.2rem'};
+    margin-bottom: 0.8rem;
+    padding: ${(props) => props.main ? '2.4rem 0 0.8rem' : '0'};
   }
 
   @media ${props => props.theme.breakpoints.sm}{
-    font-size: 32px;
-    line-height: 40px;
-    font-size: ${(props) => props.main ? '28px' : '32px'};
-    line-height: ${(props) => props.main ? '32px' : '40px'};
-    margin-bottom: 8px;
-    padding: ${(props) => props.main ? '16px 0 8px' : '0'};
+    font-size: ${(props) => props.main ? '2.8rem' : '2.4rem'};
+    line-height: ${(props) => props.main ? '3.6rem' : '2.8rem'};
+    margin-bottom: 0.6rem;
+    padding: ${(props) => props.main ? '1.2rem 0 0.4rem' : '0'};
     max-width: 100%;
   }
 `
 
 export const SectionText = styled.p`
   max-width: 800px;
-  font-size: 24px;
-  line-height: 40px;
+  font-size: 1.8rem;
+  line-height: 3.2rem;
   font-weight: 300;
-  padding-bottom: 3.6rem;
-  color: rgba(0, 0, 0, 0.7);
+  padding-bottom: 2rem;
+  color: ${(props) => props.theme.colors.primary2};
 
   @media ${(props) => props.theme.breakpoints.md} {
     max-width: 670px;
-    font-size: 20px;
-    line-height: 32px;
-    padding-bottom: 24px;
+    font-size: 1.7rem;
+    line-height: 2.8rem;
+    padding-bottom: 1.6rem;
   }
 
   @media ${(props) => props.theme.breakpoints.sm} {
-    font-size: 16px;
-    line-height: 24px;
-    padding-bottom: 16px;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    padding-bottom: 1rem;
   }
 `
 
 export const SectionDivider = styled.div`
-
-  width: 64px;
-  height: 6px;
-  border-radius: 10px;
-  background-color: #333;
-  background: ${(props) => props.colorAlt ? 
-    'linear-gradient(270deg, #F46737 0%, #945DD6 100%)' :
-    'linear-gradient(270deg, #13ADC7 0%, #945DD6 100%)'};
-
-    margin: ${(props) => props.divider ? "4rem 0" : "" };
+  width: 100%;
+  max-width: 100vw;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, rgba(74,144,226,0.7) 0%, rgba(44,93,133,0.7) 100%);
+  box-shadow: 0 2px 16px 0 rgba(74,144,226,0.10);
+  backdrop-filter: blur(1.5px);
+  opacity: 0.85;
+  border: none;
 
   @media ${(props) => props.theme.breakpoints.md} {
-    width: 48px;
-    height: 4px;
+    margin: 32px 0 24px 0;
   }
 
   @media ${(props) => props.theme.breakpoints.sm} {
-    width: 32px;
-    height: 2px;
+    margin: 24px 0 16px 0;
   }
 `
+
 export const SectionSubText = styled.p`
   max-width: 800px;
   font-weight: 300;
-  font-size: 18px;
-  line-height: 32px;
+  font-size: 2rem;
+  line-height: 3.6rem;
   color: rgba(0, 0, 0, 0.75);
 
 @media ${(props) => props.theme.breakpoints.md} {
     max-width: 672px;
-    font-size: 16px;
-    line-height: 25px;
+    font-size: 1.8rem;
+    line-height: 3rem;
   }
 
   @media ${(props) => props.theme.breakpoints.sm} {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
   }
 `
 export const SecondaryBtn = styled.button`
@@ -122,13 +118,13 @@ export const SecondaryBtn = styled.button`
   border: 1px solid rgba(0, 0, 0, 0.33);
   box-sizing: border-box;
   border-radius: 999px;
-  padding: 16px 24px;
+  padding: 1.8rem 2.6rem;
   font-weight: 600;
-  font-size: 18px;
-  line-height: 16px;
+  font-size: 1.8rem;
+  line-height: 1.8rem;
   width: fit-content;
-  margin-top: 32px;
-  margin-bottom: 80px;
+  margin-top: 3.2rem;
+  margin-bottom: 8rem;
   cursor: pointer;
   transition: 0.4s ease;
   &:focus {
